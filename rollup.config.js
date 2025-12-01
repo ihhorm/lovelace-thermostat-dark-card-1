@@ -11,7 +11,7 @@ const dev = process.env.ROLLUP_WATCH;
 const serveopts = {
   contentBase: ['./dist'],
   host: '0.0.0.0',
-  port: 5000,
+  port: 5001,
   allowCrossOrigin: true,
   headers: {
     'Access-Control-Allow-Origin': '*',
@@ -30,13 +30,21 @@ const plugins = [
   !dev && terser(),
 ];
 
+const output = [
+  {
+    file: 'dist/thermostat-dark-card.js',
+    format: 'es',
+  },
+  {
+    file: 'thermostat-dark-card.js',
+    format: 'es',
+  },
+];
+
 export default [
   {
     input: 'src/thermostat-dark-card.ts',
-    output: {
-      dir: 'dist',
-      format: 'es',
-    },
+    output,
     plugins: [...plugins],
   },
 ];
