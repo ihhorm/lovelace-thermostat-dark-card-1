@@ -194,11 +194,8 @@ export class ThermostatDarkCard extends ThermostatUserInterface {
     return css`
       .dial_container {
         padding: 12px;
-        background: radial-gradient(circle at 30% 20%, #234d72 0%, #13283d 55%, #0c1524 100%);
+        background: transparent;
         border-radius: 18px;
-        box-shadow:
-          0 14px 34px rgba(0, 0, 0, 0.4),
-          inset 0 0 0 1px rgba(255, 255, 255, 0.05);
       }
       .dial_title {
         font-size: 20px;
@@ -209,11 +206,11 @@ export class ThermostatDarkCard extends ThermostatUserInterface {
       }
       .dial {
         user-select: none;
-        --thermostat-off-fill: #2f3b52;
-        --thermostat-idle-fill: #12324a;
-        --thermostat-path-color: rgba(255, 255, 255, 0.28);
-        --thermostat-heating-fill: #ff7a18;
-        --thermostat-cooling-fill: #2ec5ff;
+        --thermostat-off-fill: transparent;
+        --thermostat-idle-fill: transparent;
+        --thermostat-path-color: rgba(255, 255, 255, 0.2);
+        --thermostat-heating-fill: transparent;
+        --thermostat-cooling-fill: transparent;
         --thermostat-path-active-color: #7fe8ff;
         --thermostat-path-active-color-large: #ffe08f;
         --thermostat-text-color: #f8fbff;

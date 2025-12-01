@@ -254,11 +254,8 @@ found at http://polymer.github.io/PATENTS.txt
     ${this.container}`}_handleHold(){}_controlSetPoints(){this.dual?this.temperature.high==this._savedState.target_temperature_high&&this.temperature.low==this._savedState.target_temperature_low||this._hass.callService("climate","set_temperature",{entity_id:this.config.entity,target_temp_high:this.temperature.high,target_temp_low:this.temperature.low}):this.temperature.target!=this._savedState.target_temperature&&this._hass.callService("climate","set_temperature",{entity_id:this.config.entity,temperature:this.temperature.target})}static get styles(){return et`
       .dial_container {
         padding: 12px;
-        background: radial-gradient(circle at 30% 20%, #234d72 0%, #13283d 55%, #0c1524 100%);
+        background: transparent;
         border-radius: 18px;
-        box-shadow:
-          0 14px 34px rgba(0, 0, 0, 0.4),
-          inset 0 0 0 1px rgba(255, 255, 255, 0.05);
       }
       .dial_title {
         font-size: 20px;
@@ -269,11 +266,11 @@ found at http://polymer.github.io/PATENTS.txt
       }
       .dial {
         user-select: none;
-        --thermostat-off-fill: #2f3b52;
-        --thermostat-idle-fill: #12324a;
-        --thermostat-path-color: rgba(255, 255, 255, 0.28);
-        --thermostat-heating-fill: #ff7a18;
-        --thermostat-cooling-fill: #2ec5ff;
+        --thermostat-off-fill: transparent;
+        --thermostat-idle-fill: transparent;
+        --thermostat-path-color: rgba(255, 255, 255, 0.2);
+        --thermostat-heating-fill: transparent;
+        --thermostat-cooling-fill: transparent;
         --thermostat-path-active-color: #7fe8ff;
         --thermostat-path-active-color-large: #ffe08f;
         --thermostat-text-color: #f8fbff;
