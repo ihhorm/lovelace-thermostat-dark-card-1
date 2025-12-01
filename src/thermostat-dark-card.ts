@@ -208,8 +208,8 @@ export class ThermostatDarkCard extends ThermostatUserInterface {
         --thermostat-path-color: rgba(255, 255, 255, 0.3);
         --thermostat-heating-fill: #e36304;
         --thermostat-cooling-fill: #007af1;
-        --thermostat-path-active-color: rgba(255, 255, 255, 0.8);
-        --thermostat-path-active-color-large: rgba(255, 255, 255, 1);
+        --thermostat-path-active-color: var(--thermostat-heating-fill);
+        --thermostat-path-active-color-large: var(--thermostat-heating-fill);
         --thermostat-text-color: white;
         --thermostat-toggle-color: grey;
         --thermostat-toggle-off-color: darkgrey;
